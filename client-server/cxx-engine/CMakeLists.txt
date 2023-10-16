@@ -43,3 +43,5 @@ vtk_module_autoinit(
   TARGETS ${library_name}
   MODULES ${VTK_LIBRARIES}
 )
+
+install(TARGETS ${library_name} DESTINATION "python")

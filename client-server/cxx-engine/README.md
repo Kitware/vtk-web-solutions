@@ -24,31 +24,28 @@ If you want to build the latest version of VTK, you can do the following
 git clone https://gitlab.kitware.com/vtk/vtk.git
 cmake \
     -S ./vtk \
-    -B ./vtk-build \
+    -B ./build/vtk \
     -G Ninja \
     -DVTK_WRAP_PYTHON=ON \
     -DVTK_GROUP_ENABLE_Web=WANT \
     -DPython3_LIBRARY=/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/lib/libpython3.9.dylib
-cmake --build ./vtk-build
-cmake --install ./vtk-build --prefix ./vtk-install
+cmake --build ./build/vtk
+cmake --install ./build/vtk --prefix ./install/vtk
 ```
 
 ## Compilation
 
 ```bash
-# Get code
-git clone https://github.com/Kitware/vtk-web-solutions.git
-
 # Build
 cmake \
-    -S ./vtk-web-solutions/client-server/cxx-engine \
-    -B ./engine-build \
+    -S ./client-server/cxx-engine \
+    -B ./build/engine \
     -G Ninja \
-    -DVTK_DIR=$PWD/vtk-build
-cmake --build ./engine-build
+    -DVTK_DIR=$PWD/install/vtk/lib/cmake/vtk-9.3
+cmake --build ./build/engine
 
 # Install
-cmake --install ./engine-build --prefix ./engine-install
+cmake --install ./build/engine --prefix ./install/engine
 ```
 
 ## Usage

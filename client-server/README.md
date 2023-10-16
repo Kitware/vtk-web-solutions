@@ -20,8 +20,8 @@ Trame can let you expose the **cxx-engine** via a single file that let you defin
 To run it just execute the following
 
 ```bash
-export PYTHONPATH=/path-to/cxx-build
-/path-to/vtk-install/bin/vtkpython ./trame-client-server.py --venv .venv
+export PYTHONPATH=$PWD/install/engine/python
+./install/vtk/bin/vtkpython ./client-server/trame-client-server.py --venv .venv
 ```
 
 ## Vue client

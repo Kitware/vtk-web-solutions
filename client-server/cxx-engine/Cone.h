@@ -5,9 +5,9 @@
 #include <vtkSmartPointer.h>
 #include <vtkRenderWindow.h>
 
-#include "cone_export.h"
+#include "cxx_engine_export.h"
 
-class CONE_EXPORT Cone {
+class CXX_ENGINE_EXPORT Cone {
     vtkSmartPointer<vtkConeSource> coneSource;
     vtkSmartPointer<vtkRenderWindow> renderWindow;
 

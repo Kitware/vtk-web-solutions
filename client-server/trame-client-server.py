@@ -14,7 +14,7 @@ from trame.ui.vuetify2 import SinglePageLayout
 from trame.widgets import vuetify2, vtk
 from trame.decorators import TrameApp, change
 
-from cone import Cone
+from cxx_engine import Cone
 
 
 @TrameApp()
