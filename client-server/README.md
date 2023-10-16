@@ -39,8 +39,8 @@ npm run build
 ### Run server
 
 ```bash
-export PYTHONPATH=/path-to/cxx-build
-/path-to/vtk-install/bin/vtkpython ./trame-server.py --venv .venv --content ./vue-client/dist
+export PYTHONPATH=$PWD/install/engine/python
+./install/vtk/bin/vtkpython ./client-server/trame-server.py --venv .venv --content ./client-server/vue-client/dist
 ```
 
 ## React client
@@ -58,6 +58,6 @@ npm run build
 ### Run server
 
 ```bash
-export PYTHONPATH=/path-to/cxx-build
-/path-to/vtk-install/bin/vtkpython ./trame-server.py --venv .venv --content ./react-client/dist
+export PYTHONPATH=$PWD/install/engine/python
+./install/vtk/bin/vtkpython ./client-server/trame-server.py --venv .venv --content ./client-server/react-client/dist
 ```
