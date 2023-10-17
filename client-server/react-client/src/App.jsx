@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import VtkRemoteView from './VtkRemoteView.jsx';
 
-function App({ wsClient }) {
+function App({ wsClient, viewId }) {
   const [resolution, setResolution] = useState(6);
 
   function updateResolution(event) {
@@ -13,8 +14,18 @@ function App({ wsClient }) {
 
   return (
     <>
-        <input type="range" min="3" max="60" value={resolution} onChange={updateResolution} />
-        <h4>{resolution}</h4>
+        <input 
+          type="range"
+          min="3" 
+          max="60" 
+          value={resolution} 
+          onChange={updateResolution} 
+          style={{ position: 'absolute', top: '20px', 'right': '20px', zIndex: 1 }}
+        />
+        <VtkRemoteView 
+          wsClient={wsClient}
+          viewId={viewId}
+        />
     </>
   )
 }

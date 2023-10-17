@@ -13,7 +13,7 @@ from trame.app import get_server
 from trame.widgets import vtk
 from trame.decorators import TrameApp, change
 
-from cone import Cone
+from cxx_engine import Cone
 
 
 @TrameApp()
