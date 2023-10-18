@@ -44,4 +44,7 @@ vtk_module_autoinit(
   MODULES ${VTK_LIBRARIES}
 )
 
-install(TARGETS ${library_name} DESTINATION "python")
+if (NOT DEFINED cxxengine_MODULE_DESTINATION)
+  set(cxxengine_MODULE_DESTINATION "python")
+endif()
+install(TARGETS ${library_name} DESTINATION "${cxxengine_MODULE_DESTINATION}")
