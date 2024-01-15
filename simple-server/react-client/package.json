@@ -1,0 +1,28 @@
+{
+    "name": "react-client",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@kitware/vtk.js": "^28.12.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "wslink": "^1.12.3"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.18",
+        "@types/react-dom": "^18.2.7",
+        "@vitejs/plugin-react": "^4.0.4",
+        "eslint": "^8.46.0",
+        "eslint-plugin-react": "^7.33.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.3",
+        "vite": "^4.4.8"
+    }
+}
